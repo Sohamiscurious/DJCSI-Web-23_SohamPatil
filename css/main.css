@@ -41,6 +41,16 @@ button{
     margin: 0 auto;
     padding: 0 1rem;
 }
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 h1, h2, h3, h4, h5, h6{
     margin: 0.6rem 0;
     line-height: 1.25;
@@ -157,6 +167,18 @@ section{
     margin: 0 auto;
 }
 
+.first-step-wrapper {
+    display: flex;
+    margin-top: 15%;
+}
+
+.team_container {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 auto;
+}
+
 .hero-content {
     flex: 1;
     text-align: left; /* Adjusted to left-align the text */
@@ -216,6 +238,13 @@ h1 {
     margin: 1.2rem auto;
     background: var(--mount-meadow);
     height: 2.5px;
+}
+
+.testimonial_container {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 
@@ -483,7 +512,9 @@ ul li {
 }
 
 
-
+.pricing .container {
+    display: block;
+}
 
 
 
@@ -495,14 +526,23 @@ ul li {
 
 /* #### Media Queries #### */
 
-@media screen and (min-width: 768px){
+@media screen and (max-width: 768px){
+    .nav_container {
+        display: block;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     .detail .row{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0rem;
     }
     .detail-item{
         margin: 0;
+        padding: 0 1.5rem;
     }
     .video h2{
         font-size: 2.6rem;
@@ -522,7 +562,7 @@ ul li {
     }
     .pricing .row{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
     }
     .pricing-item{
@@ -540,6 +580,51 @@ ul li {
     }
     .contact-right > div:first-child{
         margin-top: 0;
+    }
+
+    .header {
+        min-height: auto;
+    }
+
+    .section {
+        padding: 2.5rem 0; 
+    }
+
+    .hide_on_mobile {
+        display: none !important;
+    }
+
+    .feature {
+        margin: 20px 0;
+    }
+
+    .pricing .container {
+        display: block;
+    }
+
+    .footer .container {
+        display: block;
+    }
+
+    .team {
+        padding: 0;
+    }
+
+    .detail {
+        padding: 0;
+    }
+
+    .detail .container {
+        padding: 1.5rem 0 0;
+    }
+
+    .navbar {
+        position: initial;
+        background-image: linear-gradient(rgb(64,25,178),rgb(64,25,178));
+    }
+
+    .nav-link {
+        color: #FFF;
     }
 }
 
@@ -616,14 +701,16 @@ ul li {
         margin-right: auto;
     }
     .detail .row{
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
     .pricing .row{
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
-    .testimonial-item p{
-        width: 60%;
-    }
+
     .contact .row{
         column-gap: 4rem;
     }
